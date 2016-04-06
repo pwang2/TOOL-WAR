@@ -3,6 +3,9 @@ module.exports={
     output:{
         filename:'index.bundle.js',
         libraryTarget:'umd'
+    },
+      externals: {
+        "jquery": "jQuery"
     }
 };
 

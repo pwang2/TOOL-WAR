@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
+		module.exports = factory(require("jQuery"));
 	else if(typeof define === 'function' && define.amd)
-		define([], factory);
+		define(["jQuery"], factory);
 	else {
-		var a = factory();
+		var a = typeof exports === 'object' ? factory(require("jQuery")) : factory(root["jQuery"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function() {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_3__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -67,7 +67,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 2 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	console.log('Trying to access this in my context', this);
 
@@ -75,6 +75,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	    console.log('I am a experienced developer but I still failed', this);
 	}).call(this);
 
+	window.jQuery=123;
+	var jq=__webpack_require__(3);
+	console.log(jq);
+
+
+/***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_3__;
 
 /***/ }
 /******/ ])

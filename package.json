@@ -1,0 +1,32 @@
+{
+    "name": "tool-war",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "browserify": "^13.0.0",
+        "browserify-shim": "^3.8.12",
+        "css-loader": "^0.23.1",
+        "style-loader": "^0.13.1"
+    },
+    "devDependencies": {},
+    "browserify": {
+        "transform": [ "browserify-shim" ]
+    },
+    "browserify-shim": {
+        "jQuery": "global:jQuery"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pwang2/TOOL-WAR.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/pwang2/TOOL-WAR/issues"
+    },
+    "homepage": "https://github.com/pwang2/TOOL-WAR#readme"
+}
